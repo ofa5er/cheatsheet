@@ -1,5 +1,5 @@
-# H1 String
-# H2 Java
+# String
+## H2 Java
 ```java
 String str = "example"
 
@@ -19,4 +19,4 @@ Arrays.sort(ar);
 String sorted = String.valueOf(ar);
 ```
 
-# H2 C++
+## C++

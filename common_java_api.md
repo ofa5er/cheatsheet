@@ -17,11 +17,25 @@ str.substring(int being, int end);
 char[] ar = str.toCharArray();
 Arrays.sort(ar);
 String sorted = String.valueOf(ar);
+
+
+//StringBuilder
+/* Avoid using str+="str"
+   On each concatenation a new copy of string is created and 2 strings are copied to over character by character   
+   O = O(n^2).
+*/
+String joinWords(String[] Words) {
+  StringBuilder sb = new StringBuilder();
+  for (String w : words) {
+    sb.append(w);
+  }
+  return sb.toString();
+}
 ```
 
 ## C++
 
-# HashTable
+# HashMap (HashTable)
 # ArrayList / Vector
 # Set
 # Stack

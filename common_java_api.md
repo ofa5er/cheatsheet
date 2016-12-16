@@ -20,3 +20,10 @@ String sorted = String.valueOf(ar);
 ```
 
 ## C++
+
+# HashTable
+# ArrayList / Vector
+# Set
+# Stack
+# Queue
+

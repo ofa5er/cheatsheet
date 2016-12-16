@@ -1,4 +1,3 @@
-#Binary Search
 #Merge Sort
 ##Runtime O() average and worst | Memory O()
 ###Java
@@ -21,3 +20,6 @@
 ###C++
 
 
+#Binary Search
+#Breadth-First-Search
+#Depth-First-Search

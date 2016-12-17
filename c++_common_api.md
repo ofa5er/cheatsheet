@@ -40,4 +40,37 @@ v.pop_back();                   //tail
 
 //Clear
 v.clear();
+
+
+
+
+
+#Set
+#incluse <set>
+
+std:set<int> s;
+s.insert(10);
+
+s.erase(10);
+s.erase(s.begin()); //erase begin
+s.erase(--s.end()); //erase end
+
+unsigned int size = s.size();
+
+//Iterate
+for(std::set<int>::iterator it = s.begin(); it != s.end(); it++) {
+    std::cout << *it << std::endl;
+}
+//Short form C++11
+for (auto i = v.begin(), e = v.end(); i != e; ++i) {
+    process(*i);
+}
+for (int& x : s) {
+    process(x);
+}
+
+
+
+
+
 ```

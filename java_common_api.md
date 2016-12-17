@@ -5,13 +5,14 @@ String str = "example"
 
 str.chartAt(1); // return x
 str.compareTo("example2"); // if equal return 0, if less return > 0
+str.equals("example2"); same as compareTo but it return false on a null string parameter instead of throwing an exception.
 str.trim(); // remove spaces
 str.toLowerCase();
 str.lenght();
 str.isEmpty();
 
-str.substring(int being);
-str.substring(int being, int end);
+str.substring(int being); O(n)
+str.substring(int being, int end); O(n)
 
 str.indexOf("ample");//Return index of first occurance, -1 if not found
 

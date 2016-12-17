@@ -56,6 +56,7 @@ s.insert(10);
 s.erase(10);
 s.erase(s.begin()); //erase begin
 s.erase(--s.end()); //erase end
+s.erase(s.rbegin()); //erase end rbegin reverse iterator increasing it go to the beginning.
 
 unsigned int size = s.size();
 

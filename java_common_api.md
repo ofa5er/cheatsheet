@@ -4,8 +4,8 @@
 String str = "example"
 
 str.chartAt(1); // return x
-str.compareTo("example2"); // if equal return 0, if less return > 0
-str.equals("example2"); same as compareTo but it return false on a null string parameter instead of throwing an exception.
+str.equals("example2"); // if !equal return false else true.
+str.compareTo("example2"); // if equal return 0, if less return > 0, if null raise an expcetion
 str.trim(); // remove spaces
 str.toLowerCase();
 str.lenght();

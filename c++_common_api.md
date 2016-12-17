@@ -40,13 +40,15 @@ v.pop_back();                   //tail
 
 //Clear
 v.clear();
+```
 
 
 
 
 
 #Set
-#incluse <set>
+```cpp
+#include <set>
 
 std:set<int> s;
 s.insert(10);
@@ -68,9 +70,8 @@ for (auto i = v.begin(), e = v.end(); i != e; ++i) {
 for (int& x : s) {
     process(x);
 }
-
-
-
-
-
 ```
+
+
+
+

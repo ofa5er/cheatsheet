@@ -11,7 +11,7 @@ str.toLowerCase();
 str.substring(int being);
 str.substring(int being, int end);
 
-str.indexOf("ample");//Return index of first occurance
+str.indexOf("ample");//Return index of first occurance, -1 if not found
 
 
 //Sort String

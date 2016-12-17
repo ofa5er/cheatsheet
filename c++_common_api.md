@@ -14,10 +14,10 @@ int head = v.front();       //head
 int value = v.at(index);    //index, raise excpetion when out of bound
 int value = v[index]; //index
 int tail = v.back();        //tail
-v.empty(); //true or false
 
 //Size
 unsigned int size = v.size();
+v.empty(); //true or false
 
 //Iterate
 for(std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {

@@ -11,6 +11,7 @@ str.toLowerCase();
 str.substring(int being);
 str.substring(int being, int end);
 
+str.indexOf("ample");
 
 
 //Sort String

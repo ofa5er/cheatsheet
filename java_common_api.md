@@ -8,6 +8,7 @@ str.compareTo("example2"); // if equal return 0, if less return > 0
 str.trim(); // remove spaces
 str.toLowerCase();
 str.lenght();
+str.isEmpty();
 
 str.substring(int being);
 str.substring(int being, int end);

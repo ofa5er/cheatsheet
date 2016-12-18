@@ -8,6 +8,11 @@ str.size();
 str.at(1);//return x;
 str[1];//return x
 
+std::string s = std::to_string(42);//c++11 converte num to string
+std::string::size_type sz;   // alias of size_t
+int i_dec = std::stoi (str_dec,&sz);
+int i_hex = std::stoi (str_hex,nullptr,16);
+
 str.empty();// return false;
 swap(str[1],str[0]);
 ```
@@ -95,3 +100,5 @@ for (int& x : s) {
 
 sqrt (4);
 ```
+
+

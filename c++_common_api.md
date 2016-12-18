@@ -33,6 +33,8 @@ int tail = v.back();        //tail
 unsigned int size = v.size();
 v.empty(); //true or false
 
+v.insert(v.begin(), value);//insert value in the begining
+
 //Iterate
 for(std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {
     std::cout << *it << std::endl;

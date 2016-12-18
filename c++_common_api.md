@@ -12,7 +12,7 @@ str.empty();// return false;
 swap(str[1],str[0]);
 ```
 
-#Vector
+#vector
 
 ```cpp
 #include <vector>

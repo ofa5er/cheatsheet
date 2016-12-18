@@ -1,3 +1,17 @@
+#string
+
+```cpp
+#include<string>
+std::string str("Example");
+
+str.size();
+str.at(1);//return x;
+str[1];//return x
+
+str.empty();// return false;
+swap(str[1],str[0]);
+```
+
 #Vector
 
 ```cpp

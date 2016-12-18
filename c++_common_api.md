@@ -73,6 +73,9 @@ for (int& x : s) {
 }
 ```
 
+#Math
+```cpp
+#include <math.h>
 
-
-
+sqrt (4);
+```

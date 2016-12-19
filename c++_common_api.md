@@ -16,6 +16,8 @@ int i_hex = std::stoi (str_hex,nullptr,16);
 str2 = str + str1; //created a new string
 str.append(str1); // modify the string
 
+str.compate(str2);// return 0 if strings are equal
+
 str.empty();// return false;
 swap(str[1],str[0]);
 ```

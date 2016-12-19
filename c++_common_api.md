@@ -67,9 +67,11 @@ v.pop_back();                   //tail
 //Clear
 v.clear();
 ```
+#unodered_map
+map<int, char> m = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
+```cpp
 
-
-
+```
 
 
 #Set

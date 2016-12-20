@@ -68,8 +68,19 @@ v.pop_back();                   //tail
 v.clear();
 ```
 #unodered_map
-map<int, char> m = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
 ```cpp
+#include<unordered_map>;
+
+map<int, char> m = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
+
+m.size();
+m.
+
+map.count(1); return 1 if exist and 0 if not;
+map[1]; return 'a';
+
+map.find('x'); return map.end() since it is not found.
+map.find('a')' retrun iterator to a;
 
 ```
 

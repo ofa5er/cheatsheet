@@ -156,4 +156,7 @@ for (int& x : s) {
 sqrt (4);
 ```
 
-
+```cpp
+#include <cmath>  
+std::abs(-1.14); //return absolute value
+```

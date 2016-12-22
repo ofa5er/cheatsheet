@@ -161,25 +161,7 @@ for (int& x : s) {
     process(x);
 }
 ```
-#Set
-```cpp
-#include<set>;
-std::set<int> s;
 
-//Insert
-s.insert(20);
-
-//Size
-unsigned int size = s.size();
-
-//Iterate
-for(std::set<int>::iterator it = s.begin(); it != s.end(); it++) {
-    std::cout << *it << std::endl;
-}
-
-//Remove
-s.remove(20);
-```
 
 #Math
 ```cpp

@@ -72,15 +72,28 @@ v.clear();
 #include<unordered_map>;
 
 map<int, char> m = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
+m.push_back({1, 'a'});
+m.push_back({1, 'a'});
 
 m.size();
-m.
+
 
 map.count(1); return 1 if exist and 0 if not;
 map[1]; return 'a';
 
 map.find('x'); return map.end() since it is not found.
 map.find('a')' retrun iterator to a;
+
+//Iterate
+for (std::map<char,int>::iterator it=mymap.begin(); it!=mymap.end(); ++it) {
+    std::cout << it->first << " => " << it->second << '\n';
+ }
+//iterate Range based C++ 11:
+for (auto& kv : myMap) {
+    std::cout << kv.first << " has value " << kv.second << std::endl;
+}
+ 
+ 
 
 ```
 

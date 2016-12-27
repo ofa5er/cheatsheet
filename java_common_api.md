@@ -1,5 +1,5 @@
 # String
-## H2 Java
+## Java
 ```java
 String str = "example"
 
@@ -37,11 +37,10 @@ String joinWords(String[] Words) {
 }
 ```
 
-## C++
-
 # HashMap (HashTable)
+
 # ArrayList / Vector
-# Set
+# HashSet
 # Stack
 # Queue
 

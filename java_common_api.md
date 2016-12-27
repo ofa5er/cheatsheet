@@ -38,7 +38,36 @@ String joinWords(String[] Words) {
 ```
 
 # HashMap (HashTable)
+```java
+import java.util.HashMap;
 
+HashMap<Integer, String> hmap = new HashMap<Integer, String>()
+hmap.put(12, "Test");
+hmap.get(12); // return "Test"
+
+
+//Iterate
+hmap.containsKey(12); // return True
+for(Entry<Integer, String> e : hmap.entrySet()) {
+     String key = e.getKey();
+     String value = e.getValue();
+}
+//Java 8 only, forEach and Lambda
+hmap.forEach((k,v)->System.out.println("Key : " + k + " Value : " + v));
+
+for (String key : map.keySet()) {
+    // only Keys
+}
+for (String value : map.values()) {
+    // only Values
+}
+
+hmap.remove(12);
+hmap.clear();
+hmap.isEmpty(); //return true
+hmap.size(); //return size
+
+```
 # ArrayList / Vector
 # HashSet
 # Stack

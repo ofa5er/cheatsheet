@@ -174,3 +174,20 @@ sqrt (4);
 #include <cmath>  
 std::abs(-1.14); //return absolute value
 ```
+#BitSet
+
+```cpp
+#include <bitset>         // std::bitset
+std::bitset<8> foo (std::string("1011"));
+
+foo.count(); //number of ones
+foo.size() - foo.count(); //number of zeros
+
+foo.set(1,0);    // 1001
+foo.set(1); // 1011
+
+foo.flip(); // 0100
+foo.flip(0); // 0101
+
+
+```

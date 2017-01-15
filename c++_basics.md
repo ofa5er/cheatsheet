@@ -1,4 +1,16 @@
 # Conditions
+```cpp
+switch n {
+    case 1: opt...;
+            opt..;
+            break;
+    case 2: opt3;
+             opt4;
+             break;
+    default: dasda;
+             break;
+}
+```
 # Loops
 # Class
 # Read/Write

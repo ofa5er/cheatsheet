@@ -2,7 +2,7 @@
 # Loops
 # Class
 # Read/Write
-```
+```cpp
 string s;
 int n;
 cin >> s >> n;
@@ -46,7 +46,7 @@ joe.age = 32; // assign a value to member age within struct joe
 joe.wage = 24.15; // assign a value to member wage within struct joe
 ```
 # Threads
-```
+```cpp
 #include <iostream>       // std::cout
 #include <thread>         // std::thread
 void foo() {// do stuff...}
@@ -65,7 +65,7 @@ int main()
 
 # Templates
 
-```
+```cpp
 template <class T>class ShiftedList {
   T* array;
   int offset, size;

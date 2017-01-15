@@ -1,14 +1,14 @@
 # Conditions
 ```cpp
 switch n {
-    case 1: opt...;
-            opt..;
-            break;
-    case 2: opt3;
-             opt4;
-             break;
-    default: dasda;
-             break;
+    case 1: 
+        opt...;
+        break;
+    case 2:
+        opt3;
+        break;
+    default: 
+        dasda;
 }
 ```
 # Loops

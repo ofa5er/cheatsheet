@@ -62,7 +62,7 @@ for (int& x : v) {
 //Remove head, index, tail
 v.erase(v.begin());             //head
 v.erase(v.begin() + index);     //index
-v.pop_back();                   //tail
+v.pop_back();                   //tail NO RETURN VALUE
 
 //Clear
 v.clear();

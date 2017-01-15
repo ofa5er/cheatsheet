@@ -61,6 +61,20 @@ int main()
   return 0;
 }
 
+
+####Lock Guard######
+#include <mutex>
+#include <queue> 
+std::queue<int> q; // Queue which multiple threads might add/remove from
+std::mutex m; // Mutex to protect this queue
+void AddToQueue(int i)
+{
+    std::lock_guard<std::mutex> lg(m); // Lock will be held from here to end of function
+    q.push(i);
+}
+
+
+
 ```
 
 # Templates

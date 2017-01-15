@@ -13,6 +13,32 @@ switch (n) {
 ```
 # Loops
 # Class
+```cpp
+#include <iostream>
+using namespace std;
+#define NAME_SIZE 50
+class Person {
+    int id;
+    char name[NAME_SIZE];
+ public:
+    Person(int a) : id(a) {
+    }
+    virtual ~Person() {
+        delete obj;
+    }
+    virtual void aboutMe(int a, int b = 5) {
+        cout << "I am person " << a << " " << b;
+    }
+}
+
+class Student : Person {
+ public:
+    void aboutMe() {
+        cout << "I am student";
+    }
+
+}
+```
 # Read/Write
 ```cpp
 string s;
@@ -84,11 +110,7 @@ void AddToQueue(int i)
     std::lock_guard<std::mutex> lg(m); // Lock will be held from here to end of function
     q.push(i);
 }
-
-
-
 ```
-
 # Templates
 
 ```cpp
@@ -106,4 +128,15 @@ public:
     ...
   }
 }
+```
+#Memory Management
+```cpp
+Objects **array = new Objects*[N];
+for (int i = 0; i < N; i++) { 
+    array[i] = new Object;
+}
+//Delete all objects allowcated with new
+for(int i=0;i<N;i++)
+    delete array[i];
+delete[] array;
 ```

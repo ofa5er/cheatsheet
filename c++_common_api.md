@@ -162,19 +162,7 @@ for (int& x : s) {
 }
 ```
 
-
-#Math
-```cpp
-#include <math.h>
-
-sqrt (4);
-```
-
-```cpp
-#include <cmath>  
-std::abs(-1.14); //return absolute value
-```
-#BitSet
+#Bitset
 
 ```cpp
 #include <bitset>         // std::bitset
@@ -189,5 +177,17 @@ foo.set(1); // 1011
 foo.flip(); // 0100
 foo.flip(0); // 0101
 
+```
 
+
+#Math
+```cpp
+#include <math.h>
+
+sqrt (4);
+```
+
+```cpp
+#include <cmath>  
+std::abs(-1.14); //return absolute value
 ```

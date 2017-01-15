@@ -1,6 +1,6 @@
 # Conditions
 ```cpp
-switch n {
+switch (n) {
     case 1: 
         opt...;
         break;

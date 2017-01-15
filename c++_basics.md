@@ -1,3 +1,8 @@
+# Arrays
+```cpp
+//Array definition;
+int ar[5] = {1, 2, 3, 4, 5};
+```
 # Conditions
 ```cpp
 switch (n) {

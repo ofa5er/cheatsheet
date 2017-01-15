@@ -4,6 +4,8 @@
 int ar[5];
 int ar[5] = {1, 2, 3, 4, 5};
 int ar[5] {1, 2, 3, 4, 5};
+
+std::fill_n(array, 100, -1);
 ```
 # Conditions
 ```cpp

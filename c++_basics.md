@@ -1,14 +1,66 @@
-# Arrays
+-------------------------------------------------------
+## String
 ```cpp
-//Array definition;
-int ar[5];
-int ar[5] = {1, 2, 3, 4, 5};
-int ar[5] {1, 2, 3, 4, 5};
-int a[256] = {0};
+#include<string>
+std::string str("Example");
 
-std::fill_n(array, 100, -1);
+str.size();
+str.at(1);//return x;
+str[1];//return x
+
+std::string s = std::to_string(42);//c++11 converte num to string
+std::string::size_type sz;   // alias of size_t
+int i_dec = std::stoi (str_dec,&sz);
+int i_hex = std::stoi (str_hex,nullptr,16);
+
+str2 = str + str1; //created a new string
+str.append(str1); // modify the string
+
+str.compate(str2);// return 0 if strings are equal
+
+str.empty();// return false;
+swap(str[1],str[0]);
 ```
-# Conditions
+-------------------------------------------------------
+## Math
+```cpp
+#include <math.h>
+
+sqrt (4);
+```
+
+```cpp
+#include <cmath>  
+std::abs(-1.14); //return absolute value
+```
+-------------------------------------------------------
+## Sort
+```cpp
+#include <algorithm>    // std::sort
+#include <vector>       // std::vector
+
+bool myfunction (int i,int j) { return (i<j); }
+
+struct myclass {
+  bool operator() (int i,int j) { return (i<j);}
+} myobject;
+
+void main () {
+  int myints[] = {32,71,12,45,26,80,53,33};
+  std::vector<int> myvector (myints, myints+8);               // 32 71 12 45 26 80 53 33
+
+  // using default comparison (operator <):
+  std::sort (myvector.begin(), myvector.begin()+4);           //(12 32 45 71)26 80 53 33
+
+  // using function as comp
+  std::sort (myvector.begin()+4, myvector.end(), myfunction); // 12 32 45 71(26 33 53 80)
+
+  // using object as comp
+  std::sort (myvector.begin(), myvector.end(), myobject);     //(12 26 32 33 45 53 71 80)
+}
+```
+-------------------------------------------------------
+## Conditions
 ```cpp
 switch (n) {
     case 1: 
@@ -21,8 +73,10 @@ switch (n) {
         dasda;
 }
 ```
-# Loops
-# Class
+-------------------------------------------------------
+## Loops
+-------------------------------------------------------
+## Class
 ```cpp
 #include <iostream>
 using namespace std;
@@ -49,7 +103,8 @@ class Student : Person {
 
 }
 ```
-# Read/Write
+-------------------------------------------------------
+## Read/Write
 ```cpp
 string s;
 int n;
@@ -80,7 +135,8 @@ myfile.close();
 
 
 ```
-# Struct
+-------------------------------------------------------
+## Struct
 ```cpp
 struct Employee
 {
@@ -93,7 +149,8 @@ joe.id = 14; // assign a value to member id within struct joe
 joe.age = 32; // assign a value to member age within struct joe
 joe.wage = 24.15; // assign a value to member wage within struct joe
 ```
-# Threads
+-------------------------------------------------------
+## Threads
 ```cpp
 #include <iostream>       // std::cout
 #include <thread>         // std::thread
@@ -121,8 +178,8 @@ void AddToQueue(int i)
     q.push(i);
 }
 ```
-# Templates
-
+-------------------------------------------------------
+## Templates
 ```cpp
 template <class T>class ShiftedList {
   T* array;
@@ -139,7 +196,8 @@ public:
   }
 }
 ```
-#Memory Management
+-------------------------------------------------------
+## Memory Management
 ```cpp
 Objects **array = new Objects*[N];
 for (int i = 0; i < N; i++) { 

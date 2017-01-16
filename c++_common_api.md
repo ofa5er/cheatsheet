@@ -75,16 +75,12 @@ v.clear();
 * Searching if key/value exists
 * Removing duplicates
 * `std::map`
-    * Ordered map
+    * Ordered map (typically implemented as *binary search trees*)
 * `std::unordered_map`
     * Hash table
 
 **Do not use for**
 * Sorting
-
-**Notes**
-* Typically ordered maps (`std::map`) are slower than unordered maps (`std::unordered_map`)
-* Maps are typically implemented as *binary search trees*
 
 **Time Complexity**
 

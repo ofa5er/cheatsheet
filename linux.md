@@ -1,5 +1,5 @@
 
-```bash
+```{r, engine='bash', count_lines}
 ps
 awk // example of complex operation
 grep

@@ -25,11 +25,8 @@ swap(str[1],str[0]);
 ## Math
 ```cpp
 #include <math.h>
-
 sqrt (4);
-```
 
-```cpp
 #include <cmath>  
 std::abs(-1.14); //return absolute value
 ```

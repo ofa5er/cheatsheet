@@ -1,5 +1,16 @@
 ## Data Structures
 -------------------------------------------------------
+### Arrays
+```cpp
+//Array definition;
+int ar[5];
+int ar[5] = {1, 2, 3, 4, 5};
+int ar[5] {1, 2, 3, 4, 5};
+int a[256] = {0};
+
+std::fill_n(array, 100, -1);
+```
+-------------------------------------------------------
 ### Vector `std::vector`
 **Use for**
 * Simple storage

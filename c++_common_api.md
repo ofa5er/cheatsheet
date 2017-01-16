@@ -67,15 +67,54 @@ v.pop_back();                   //tail NO RETURN VALUE
 //Clear
 v.clear();
 ```
-#unodered_map
+
+### 1.5 Map `std::map` and `std::unordered_map`
+**Use for**
+* Key-value pairs
+* Constant lookups by key
+* Searching if key/value exists
+* Removing duplicates
+* `std::map`
+    * Ordered map
+* `std::unordered_map`
+    * Hash table
+
+**Do not use for**
+* Sorting
+
+**Notes**
+* Typically ordered maps (`std::map`) are slower than unordered maps (`std::unordered_map`)
+* Maps are typically implemented as *binary search trees*
+
+**Time Complexity**
+
+**`std::map`**
+
+| Operation           | Time Complexity |
+|---------------------|-----------------|
+| Insert              |     `O(log(n))` |
+| Access by Key       |     `O(log(n))` |
+| Remove by Key       |     `O(log(n))` |
+| Find/Remove Value   |     `O(log(n))` |
+
+**`std::unordered_map`**
+
+| Operation           | Time Complexity |
+|---------------------|-----------------|
+| Insert              |          `O(1)` |
+| Access by Key       |          `O(1)` |
+| Remove by Key       |          `O(1)` |
+| Find/Remove Value   |              -- |
 ```cpp
-#include<unordered_map>;
+#include<map>;
+//or #include<unordered_map>;
+// unordered_map<int, char> m = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
 
-map<int, char> m = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
-m.push_back({1, 'a'});
-m.push_back({1, 'a'});
+map<int, char> map = {{1, 'a'}, {3, 'b'}, {5, 'c'}, {7, 'd'}};
+map.push_back({1, 'a'});
+map.push_back({1, 'a'});
 
-m.size();
+map.size();
 
 
 map.count(1); return 1 if exist and 0 if not;
@@ -92,10 +131,9 @@ for (std::map<char,int>::iterator it=mymap.begin(); it!=mymap.end(); ++it) {
 for (auto& kv : myMap) {
     std::cout << kv.first << " has value " << kv.second << std::endl;
 }
- 
- 
-
 ```
+
+
 
 #deque
 Pronounced 'deck'

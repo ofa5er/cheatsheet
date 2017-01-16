@@ -1,4 +1,5 @@
-#string
+-------------------------------------------------------
+## String
 
 ```cpp
 #include<string>
@@ -21,8 +22,36 @@ str.compate(str2);// return 0 if strings are equal
 str.empty();// return false;
 swap(str[1],str[0]);
 ```
+## 1.0 Data Structures
+-------------------------------------------------------
+### 1.2 Vector `std::vector`
+**Use for**
+* Simple storage
+* Adding but not deleting
+* Serialization
+* Quick lookups by index
+* Easy conversion to C-style arrays
+* Efficient traversal (contiguous CPU caching)
 
-#vector
+**Do not use for**
+* Insertion/deletion in the middle of the list
+* Dynamically changing storage
+* Non-integer indexing
+
+**Time Complexity**
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+| Insert Head  |          `O(n)` |
+| Insert Index |          `O(n)` |
+| Insert Tail  |          `O(1)` |
+| Remove Head  |          `O(n)` |
+| Remove Index |          `O(n)` |
+| Remove Tail  |          `O(1)` |
+| Find Index   |          `O(1)` |
+| Find Object  |          `O(n)` |
+
+**Example Code**
 
 ```cpp
 #include <vector>
@@ -67,7 +96,7 @@ v.pop_back();                   //tail NO RETURN VALUE
 //Clear
 v.clear();
 ```
-
+-------------------------------------------------------
 ### 1.5 Map `std::map` and `std::unordered_map`
 **Use for**
 * Key-value pairs
@@ -130,11 +159,176 @@ for (auto& kv : myMap) {
 }
 ```
 
+### 1.6 Set `std::set`
+**Use for**
+* Removing duplicates
+* Ordered dynamic storage
 
+**Do not use for**
+* Simple storage
+* Direct access by index
 
-#deque
-Pronounced 'deck'
-Stands for Double Ended Queue
+**Notes**
+* Sets are often implemented with binary search trees
+
+**Time Complexity**
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+| Insert       |     `O(log(n))` |
+| Remove       |     `O(log(n))` |
+| Find         |     `O(log(n))` |
+
+**Example Code**
+
+```cpp
+#include <set>
+
+std:set<int> s;
+s.insert(10);
+
+s.erase(10);
+s.erase(s.begin()); //erase begin
+s.erase(--s.end()); //erase end
+s.erase(s.rbegin()); //erase end rbegin reverse iterator increasing it go to the beginning.
+
+unsigned int size = s.size();
+
+//Iterate
+for(std::set<int>::iterator it = s.begin(); it != s.end(); it++) {
+    std::cout << *it << std::endl;
+}
+//Short form C++11
+for (auto i = v.begin(), e = v.end(); i != e; ++i) {
+    process(*i);
+}
+for (int& x : s) {
+    process(x);
+}
+```
+-------------------------------------------------------
+#Bitset
+
+```cpp
+#include <bitset>         // std::bitset
+std::bitset<8> foo (std::string("1011"));
+
+foo.count(); //number of ones
+foo.size() - foo.count(); //number of zeros
+
+foo.set(1,0);    // 1001
+foo.set(1); // 1011
+foo.flip(); // 0100
+foo.flip(0); // 0101
+```
+-------------------------------------------------------
+### 1.7 Stack `std::stack`
+**Use for**
+* First-In Last-Out operations
+* Reversal of elements
+
+**Time Complexity**
+
+| Operation    | Time Complexity |
+|--------------|-----------------|
+| Push         |          `O(1)` |
+| Pop          |          `O(1)` |
+| Top          |          `O(1)` |
+
+**Example Code**
+```c++
+std::stack<int> s;
+
+//---------------------------------
+// Container-Specific Operations
+//---------------------------------
+
+//Push
+s.push(20);
+
+//Size
+unsigned int size = s.size();
+
+//Pop
+s.pop();
+
+//Top
+int top = s.top();
+```
+-------------------------------------------------------
+### 1.8 Queue `std::queue`
+**Use for**
+* First-In First-Out operations
+* Ex: Simple online ordering system (first come first served)
+* Ex: Semaphore queue handling
+* Ex: CPU scheduling (FCFS)
+
+**Notes**
+* Often implemented as a `std::deque`
+
+**Example Code**
+```c++
+std::queue<int> q;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+//Insert
+q.push(value);
+
+//Access head, tail
+int head = q.front();       //head
+int tail = q.back();        //tail
+
+//Size
+unsigned int size = q.size();
+
+//Remove
+q.pop();
+```
+-------------------------------------------------------
+### 1.9 Priority Queue `std::priority_queue`
+**Use for**
+* First-In First-Out operations where **priority** overrides arrival time
+* Ex: CPU scheduling (smallest job first, system/user priority)
+* Ex: Medical emergencies (gunshot wound vs. broken arm)
+
+**Notes**
+* Often implemented as a `std::vector`
+
+**Example Code**
+```c++
+std::priority_queue<int> p;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+//Insert
+p.push(value);
+
+//Access
+int top = p.top();  //`Top` element
+
+//Size
+unsigned int size = p.size();
+
+//Remove
+p.pop();
+```
+-------------------------------------------------------
+### 1.4 Deque `std::deque`
+**Use for**
+* Similar purpose of `std::vector`
+* Basically `std::vector` with efficient `push_front` and `pop_front`
+
+**Do not use for**
+* C-style contiguous storage (not guaranteed)
+
+**Notes**
+* Pronounced 'deck'
+* Stands for **D**ouble **E**nded **Que**ue
 ```cpp
 std::deque<int> d;
 
@@ -168,53 +362,91 @@ d.pop_back();                   //tail
 //Clear
 d.clear();
 ```
+-------------------------------------------------------
+### 1.4 List `std::list` and `std::forward_list`
+**Use for**
+* Insertion into the middle/beginning of the list
+* Efficient sorting (pointer swap vs. copying)
 
-#Set
+**Do not use for**
+* Direct access
 
-```cpp
-#include <set>
+**Time Complexity**
 
-std:set<int> s;
-s.insert(10);
+| Operation    | Time Complexity |
+|--------------|-----------------|
+| Insert Head  |          `O(1)` |
+| Insert Index |          `O(n)` |
+| Insert Tail  |          `O(1)` |
+| Remove Head  |          `O(1)` |
+| Remove Index |          `O(n)` |
+| Remove Tail  |          `O(1)` |
+| Find Index   |          `O(n)` |
+| Find Object  |          `O(n)` |
 
-s.erase(10);
-s.erase(s.begin()); //erase begin
-s.erase(--s.end()); //erase end
-s.erase(s.rbegin()); //erase end rbegin reverse iterator increasing it go to the beginning.
+**Example Code**
+```c++
+std::list<int> l;
 
-unsigned int size = s.size();
+//---------------------------------
+// General Operations
+//---------------------------------
+
+//Insert head, index, tail
+l.push_front(value);                    //head
+l.insert(l.begin() + index, value);     //index
+l.push_back(value);                     //tail
+
+//Access head, index, tail
+int head = l.front();                                           //head
+int value = std::list<int>::iterator it = l.begin() + index;    //index
+int tail = l.back();                                            //tail
+
+//Size
+unsigned int size = l.size();
 
 //Iterate
-for(std::set<int>::iterator it = s.begin(); it != s.end(); it++) {
+for(std::list<int>::iterator it = l.begin(); it != l.end(); it++) {
     std::cout << *it << std::endl;
 }
-//Short form C++11
-for (auto i = v.begin(), e = v.end(); i != e; ++i) {
-    process(*i);
-}
-for (int& x : s) {
-    process(x);
-}
+
+//Remove head, index, tail
+l.pop_front();                  //head
+l.erase(l.begin() + index);     //index
+l.pop_back();                   //tail
+
+//Clear
+l.clear();
+
+//---------------------------------
+// Container-Specific Operations
+//---------------------------------
+
+//Splice: Transfer elements from list to list
+//  splice(iterator pos, list &x)
+//  splice(iterator pos, list &x, iterator i)
+//  splice(iterator pos, list &x, iterator first, iterator last)
+l.splice(l.begin() + index, list2);
+
+//Remove: Remove an element by value
+l.remove(value);
+
+//Unique: Remove duplicates
+l.unique();
+
+//Merge: Merge two sorted lists
+l.merge(list2);
+
+//Sort: Sort the list
+l.sort();
+
+//Reverse: Reverse the list order
+l.reverse();
 ```
 
-#Bitset
-
-```cpp
-#include <bitset>         // std::bitset
-std::bitset<8> foo (std::string("1011"));
-
-foo.count(); //number of ones
-foo.size() - foo.count(); //number of zeros
-
-foo.set(1,0);    // 1001
-foo.set(1); // 1011
-
-foo.flip(); // 0100
-foo.flip(0); // 0101
-
-```
 
 
+-------------------------------------------------------
 #Math
 ```cpp
 #include <math.h>
@@ -226,6 +458,7 @@ sqrt (4);
 #include <cmath>  
 std::abs(-1.14); //return absolute value
 ```
+-------------------------------------------------------
 #Sort
 ```cpp
 #include <algorithm>    // std::sort

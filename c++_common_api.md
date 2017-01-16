@@ -120,10 +120,13 @@ map.find('x'); return map.end() since it is not found.
 map.find('a')' retrun iterator to a;
 
 //Iterate
+
 for (std::map<char,int>::iterator it=mymap.begin(); it!=mymap.end(); ++it) {
     std::cout << it->first << " => " << it->second << '\n';
  }
-//iterate Range based C++ 11:
+ 
+//iterate Range based C++ 11
+
 for (auto& kv : myMap) {
     std::cout << kv.first << " has value " << kv.second << std::endl;
 }

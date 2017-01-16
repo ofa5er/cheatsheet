@@ -1,30 +1,6 @@
+## Data Structures
 -------------------------------------------------------
-## String
-
-```cpp
-#include<string>
-std::string str("Example");
-
-str.size();
-str.at(1);//return x;
-str[1];//return x
-
-std::string s = std::to_string(42);//c++11 converte num to string
-std::string::size_type sz;   // alias of size_t
-int i_dec = std::stoi (str_dec,&sz);
-int i_hex = std::stoi (str_hex,nullptr,16);
-
-str2 = str + str1; //created a new string
-str.append(str1); // modify the string
-
-str.compate(str2);// return 0 if strings are equal
-
-str.empty();// return false;
-swap(str[1],str[0]);
-```
-## 1.0 Data Structures
--------------------------------------------------------
-### 1.2 Vector `std::vector`
+### Vector `std::vector`
 **Use for**
 * Simple storage
 * Adding but not deleting
@@ -97,7 +73,7 @@ v.pop_back();                   //tail NO RETURN VALUE
 v.clear();
 ```
 -------------------------------------------------------
-### 1.5 Map `std::map` and `std::unordered_map`
+### Map `std::map` and `std::unordered_map`
 **Use for**
 * Key-value pairs
 * Constant lookups by key
@@ -158,8 +134,8 @@ for (auto& kv : myMap) {
     std::cout << kv.first << " has value " << kv.second << std::endl;
 }
 ```
-
-### 1.6 Set `std::set`
+-------------------------------------------------------
+### Set `std::set`
 **Use for**
 * Removing duplicates
 * Ordered dynamic storage
@@ -207,7 +183,7 @@ for (int& x : s) {
 }
 ```
 -------------------------------------------------------
-#Bitset
+### Bitset `std::bitset`
 
 ```cpp
 #include <bitset>         // std::bitset
@@ -222,7 +198,7 @@ foo.flip(); // 0100
 foo.flip(0); // 0101
 ```
 -------------------------------------------------------
-### 1.7 Stack `std::stack`
+### Stack `std::stack`
 **Use for**
 * First-In Last-Out operations
 * Reversal of elements
@@ -256,7 +232,7 @@ s.pop();
 int top = s.top();
 ```
 -------------------------------------------------------
-### 1.8 Queue `std::queue`
+### Queue `std::queue`
 **Use for**
 * First-In First-Out operations
 * Ex: Simple online ordering system (first come first served)
@@ -288,37 +264,7 @@ unsigned int size = q.size();
 q.pop();
 ```
 -------------------------------------------------------
-### 1.9 Priority Queue `std::priority_queue`
-**Use for**
-* First-In First-Out operations where **priority** overrides arrival time
-* Ex: CPU scheduling (smallest job first, system/user priority)
-* Ex: Medical emergencies (gunshot wound vs. broken arm)
-
-**Notes**
-* Often implemented as a `std::vector`
-
-**Example Code**
-```c++
-std::priority_queue<int> p;
-
-//---------------------------------
-// General Operations
-//---------------------------------
-
-//Insert
-p.push(value);
-
-//Access
-int top = p.top();  //`Top` element
-
-//Size
-unsigned int size = p.size();
-
-//Remove
-p.pop();
-```
--------------------------------------------------------
-### 1.4 Deque `std::deque`
+### Deque `std::deque`
 **Use for**
 * Similar purpose of `std::vector`
 * Basically `std::vector` with efficient `push_front` and `pop_front`
@@ -363,7 +309,7 @@ d.pop_back();                   //tail
 d.clear();
 ```
 -------------------------------------------------------
-### 1.4 List `std::list` and `std::forward_list`
+### List `std::list` and `std::forward_list`
 **Use for**
 * Insertion into the middle/beginning of the list
 * Efficient sorting (pointer swap vs. copying)
@@ -443,44 +389,36 @@ l.sort();
 //Reverse: Reverse the list order
 l.reverse();
 ```
-
-
-
 -------------------------------------------------------
-#Math
-```cpp
-#include <math.h>
+### Priority Queue `std::priority_queue`
+**Use for**
+* First-In First-Out operations where **priority** overrides arrival time
+* Ex: CPU scheduling (smallest job first, system/user priority)
+* Ex: Medical emergencies (gunshot wound vs. broken arm)
 
-sqrt (4);
+**Notes**
+* Often implemented as a `std::vector`
+
+**Example Code**
+```c++
+std::priority_queue<int> p;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+//Insert
+p.push(value);
+
+//Access
+int top = p.top();  //`Top` element
+
+//Size
+unsigned int size = p.size();
+
+//Remove
+p.pop();
 ```
 
-```cpp
-#include <cmath>  
-std::abs(-1.14); //return absolute value
-```
--------------------------------------------------------
-#Sort
-```cpp
-#include <algorithm>    // std::sort
-#include <vector>       // std::vector
 
-bool myfunction (int i,int j) { return (i<j); }
 
-struct myclass {
-  bool operator() (int i,int j) { return (i<j);}
-} myobject;
-
-void main () {
-  int myints[] = {32,71,12,45,26,80,53,33};
-  std::vector<int> myvector (myints, myints+8);               // 32 71 12 45 26 80 53 33
-
-  // using default comparison (operator <):
-  std::sort (myvector.begin(), myvector.begin()+4);           //(12 32 45 71)26 80 53 33
-
-  // using function as comp
-  std::sort (myvector.begin()+4, myvector.end(), myfunction); // 12 32 45 71(26 33 53 80)
-
-  // using object as comp
-  std::sort (myvector.begin(), myvector.end(), myobject);     //(12 26 32 33 45 53 71 80)
-}
-```

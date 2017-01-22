@@ -182,11 +182,56 @@ void postOrder(Tree root) {
 # Tries
 -------------------------------------------------------
 # Graph
-## Depth First Search
+## Note
+- Could be implemented using adjacency list or adjacency matrix.
+- The adjacency list implementation is the most commmon.
+## Code
+```java
+public class GraphNode {
+  pubilc String name;
+  public GraphNode[] adjacent;
+}
+public class Graph {
+  public GraphNode nodes;
+}
+```
+## Depth-First Search (DFS)
+### 
+- pre-order traversal is a form of DFS
 ### Recursive
+```java
+void DFS(Node root) {
+  if (root == null) return;
+  visit(root);
+  root.visited = true;
+  for each (Node n in root.adjacent) {
+    if (n.visited == flase) {
+      DFS(n);
+    }
+  }
+}
+```
 ### Iterative
 ## Breadth First Search
+### Note:
+- Node a visits each of a's neighbors before visiting any of their neighbors.
 ### Iterative
+```java
+void search(Node root) {
+  Queue queue = new Queue();
+  root.marked = true;
+  queue.enqueue(root);
+  
+  while (!queue.isEmpty()) {
+    Node r = queue.dequeue();
+    visit(r);
+    for each (Node neighboor in r.adjacency) {
+      if (neighboor.marked == false) {
+        neighboor.marked = true;
+        r.enqueue(neighboor);
+      }
+    }
+  }
+}
+```
 ### Recursive
-
-

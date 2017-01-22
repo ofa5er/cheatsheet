@@ -149,7 +149,7 @@ public class Tree {
 ## Binary Search Tree
 ## BinaryTree Traversal
 ### Pre-Order Traversal
-https://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg)
 Pre-order: F, B, A, D, C, E, G, I, H.
 ```java
 void inOrderTraversal(Tree root) {
@@ -160,6 +160,7 @@ void inOrderTraversal(Tree root) {
 }
 ```
 ### In-Order Traversal
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/7/77/Sorted_binary_tree_inorder.svg)In-order: A, B, C, D, E, F, G, H, I.
 ```java
 void inOrderTraversal(Tree root) {
   if (root == null) return;
@@ -169,6 +170,7 @@ void inOrderTraversal(Tree root) {
 }
 ```
 ### Post-Order Traversal
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/9/9d/Sorted_binary_tree_postorder.svg)Post-order: A, C, E, D, B, H, I, G, F.
 ```java
 void inOrderTraversal(Tree root) {
   if (root == null) return;

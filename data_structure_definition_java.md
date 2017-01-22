@@ -152,31 +152,31 @@ public class Tree {
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg)
 Pre-order: F, B, A, D, C, E, G, I, H.
 ```java
-void inOrderTraversal(Tree root) {
+void preOrder(Tree root) {
   if (root == null) return;
-  visit(root)
-  inOrderTraversal(root.left);
-  inOrderTraversal(root.right);
+  visit(root);
+  preOrder(root.left);
+  preOrder(root.right);
 }
 ```
 ### In-Order Traversal
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/7/77/Sorted_binary_tree_inorder.svg)In-order: A, B, C, D, E, F, G, H, I.
 ```java
-void inOrderTraversal(Tree root) {
+void inOrder(Tree root) {
   if (root == null) return;
-  inOrderTraversal(root.left);
-  visit(root)
-  inOrderTraversal(root.right);
+  inOrder(root.left);
+  visit(root);
+  inOrder(root.right);
 }
 ```
 ### Post-Order Traversal
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/9/9d/Sorted_binary_tree_postorder.svg)Post-order: A, C, E, D, B, H, I, G, F.
 ```java
-void inOrderTraversal(Tree root) {
+void postOrder(Tree root) {
   if (root == null) return;
-  inOrderTraversal(root.left);
-  inOrderTraversal(root.right);
-  visit(root)
+  postOrder(root.left);
+  postOrder(root.right);
+  visit(root);
 }
 ```
 # Tries

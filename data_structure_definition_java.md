@@ -41,11 +41,93 @@ class Node {
 -------------------------------------------------------
 # Stack
 ## Notes:
-- Usefull for recursive algorithms
-## Defintion
+- Usefull for recursive algorithms : push temporary data as you recurse then remove them as you backtrack.
+- Usefull in implementing a recursive algorithm iteratively.
+## Code
+```java
+pop(), push(item), peek(), isEmpty();
+public class Stack<T> {
+  private static class StackNode<T> {
+    private T data;
+    private StackNode<T> next;
+    public StackNode<T>(T data) {
+      this.data = data;
+    }
+  }
+  private StackNode<T> top;
+  
+  public T pop() throws EmptyStackException {
+    if (top == null) throw new EmptyStackException();
+    T item = top.data;
+    top = top.next;
+    return item;
+  }
+  
+  public void push(T item) {
+    StackNode t = new StackNode<T>(item);
+    t.next = top;
+    top = t;
+  }
+  
+  public T peek() throws EmptyStackException {
+    if (top == null) throw EmptyStackException();
+    return top.data;
+  }
+  
+  public boolean isEmpty() {
+    return top == null;
+  }
+}
+```
 class 
 -------------------------------------------------------
 # Queue
+## Node
+- Queue are usually used in Breadth-First Search or in implementing a cache.
+## Code
+```java
+add(1), remove(), peek(), isEmpty()
+
+public class Queue<T> {
+  public static class QueueNode<T> {
+    T data;
+    QueueNode<T> next;
+    public QueueNode<T>(T data) {
+      this.data = data;
+    }
+    private QueueNode<T> first;
+    private QuebeNode<T> last;
+    
+    public void add(T item) {
+      QueueNode<T> t = new QueueNode<T>(item);
+      if (last != null) {
+        last.next = t;
+      }
+      last = t;
+      if (first == null) {
+        first = last;
+      }
+      public T remove() throws EmptyQueueException{
+        if (first == null) throw new EmptyQueueException();
+        T data = first.data;
+        first = first.next;
+        if (first == null) {
+          last = null;
+        }
+        return data;
+      }
+      public T peek()  throws EmptyQueueException{
+        if (first == null) throw new EmptyQueueException();
+        return first.data;
+      }
+      public boolean isEmpty() {
+        return first == null;
+      }
+    }
+  }
+  
+}
+```
 -------------------------------------------------------
 # Heap
 -------------------------------------------------------

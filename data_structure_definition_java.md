@@ -5,6 +5,7 @@ Data strcutres implementaion using java.
 ## Notes
 - Think about recursive approach when having trouble with linkedlist problems.
 - The "Runner Technique" : use 2 pointers a fast one and a slow one.
+
 ## Code
 ```java
 class Node {
@@ -43,9 +44,9 @@ class Node {
 ## Notes:
 - Usefull for recursive algorithms : push temporary data as you recurse then remove them as you backtrack.
 - Usefull in implementing a recursive algorithm iteratively.
+
 ## Code
 ```java
-pop(), push(item), peek(), isEmpty();
 public class Stack<T> {
   private static class StackNode<T> {
     private T data;
@@ -84,10 +85,9 @@ class
 # Queue
 ## Node
 - Queue are usually used in Breadth-First Search or in implementing a cache.
+
 ## Code
 ```java
-add(1), remove(), peek(), isEmpty()
-
 public class Queue<T> {
   public static class QueueNode<T> {
     T data;

@@ -146,6 +146,66 @@ public class Tree {
 }
 ```
 ## Binary Search Tree
+# Code
+```java
+public class BSTNode {
+  public int data;
+  public BSTNode left, right, parent;
+  private int size = 0;
+  
+  public void BSTNode(int d) {
+    data = d;
+    size = 1;
+  }
+  
+  public void insertInOrder(int d) {
+    if (d <= data) {
+      if (left == null) {
+        setLeftChild(new BSTNode(d))
+      } else {
+        left.insertInOrder(d);
+      }
+    } else {
+      if (right == null) {
+        setRightChild(new BSTNode(d));
+      } else {
+        right.insertInOrder(d);
+      }
+     }
+    }
+    size++;
+  }
+  public int size() {
+    return size;
+  }
+  public TreeNode find(int d) {
+    if (d == data) {
+      return this;
+    } else if (d <= data) {
+      return left != null ? left.find(d) : null;
+    } else if (d > data) {
+      return right != null ? right.find(d) : null;
+    }
+    return null;
+  }
+  
+  public setRightChild(TreeNode right) {
+    this.right = right;
+    if (right != null) {
+      right.parent = this;
+    }
+  }
+  
+  public setLeftChild(TreeNode left) {
+    this.left = left;
+    if (left != null) {
+      left.parent = this;
+    }
+  }
+  
+}
+
+```
 ## BinaryTree Traversal
 ### Pre-Order Traversal
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg)
@@ -181,7 +241,7 @@ void postOrder(Tree root) {
 # Tries
 -------------------------------------------------------
 # Graph
-## Note
+## Notes
 - Could be implemented using adjacency list or adjacency matrix.
 - The adjacency list implementation is the most commmon.
 ## Code
@@ -197,7 +257,9 @@ public class Graph {
 ## Depth-First Search (DFS)
 ### 
 - pre-order traversal is a form of DFS
-### Recursive
+- Complexity: `O(E), E = number of edges`.
+- Space : `O(V), V = number of vertices`.
+### Recursive (Recommended)
 ```java
 void DFS(Node root) {
   if (root == null) return;
@@ -214,10 +276,10 @@ void DFS(Node root) {
 ## Breadth First Search
 ### Note:
 - Node a visits each of a's neighbors before visiting any of their neighbors.
-- Space : `O(V), V = number of vertices`.
 - Complexity: `O(E), E = number of edges`.
+- Space : `O(V), V = number of vertices`.
 
-### Iterative
+### Iterative (Recommended)
 ```java
 void search(Node root) {
   Queue queue = new Queue();

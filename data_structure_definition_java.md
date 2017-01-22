@@ -214,6 +214,9 @@ void DFS(Node root) {
 ## Breadth First Search
 ### Note:
 - Node a visits each of a's neighbors before visiting any of their neighbors.
+- Space : `O(V)`, V = number of vertices.
+- Complexity: O(E), E = number of edges.
+
 ### Iterative
 ```java
 void search(Node root) {

@@ -136,10 +136,47 @@ public class Queue<T> {
 # Hash Table
 -------------------------------------------------------
 # Tree
-# Binary Search Tree
-## In-Order Traversal
-## Pre-Order Traversal
-## Post-Order Traversal
+## Code
+```java
+public class TreeNode {
+  String name;
+  public Node[] children;
+}
+public class Tree {
+  public Node root;
+}
+```
+## Binary Search Tree
+## BinaryTree Traversal
+### Pre-Order Traversal
+https://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
+Pre-order: F, B, A, D, C, E, G, I, H.
+```java
+void inOrderTraversal(Tree root) {
+  if (root == null) return;
+  visit(root)
+  inOrderTraversal(root.left);
+  inOrderTraversal(root.right);
+}
+```
+### In-Order Traversal
+```java
+void inOrderTraversal(Tree root) {
+  if (root == null) return;
+  inOrderTraversal(root.left);
+  visit(root)
+  inOrderTraversal(root.right);
+}
+```
+### Post-Order Traversal
+```java
+void inOrderTraversal(Tree root) {
+  if (root == null) return;
+  inOrderTraversal(root.left);
+  inOrderTraversal(root.right);
+  visit(root)
+}
+```
 # Tries
 -------------------------------------------------------
 # Graph

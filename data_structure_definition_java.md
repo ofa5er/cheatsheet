@@ -333,6 +333,8 @@ public class BSTNode {
 ```
 ## BinaryTree Traversal
 ### Pre-Order Traversal
+- Visit current node -> children 
+- Root is always the first node to visit
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg)
 Pre-order: F, B, A, D, C, E, G, I, H.
 ```java
@@ -344,6 +346,7 @@ void preOrder(Tree root) {
 }
 ```
 ### In-Order Traversal
+- Visit left -> current node -> right
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/7/77/Sorted_binary_tree_inorder.svg)In-order: A, B, C, D, E, F, G, H, I.
 ```java
 void inOrder(Tree root) {
@@ -354,6 +357,8 @@ void inOrder(Tree root) {
 }
 ```
 ### Post-Order Traversal
+- Visit the current node after its children
+- Root is always the last node.
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/9/9d/Sorted_binary_tree_postorder.svg)Post-order: A, C, E, D, B, H, I, G, F.
 ```java
 void postOrder(Tree root) {
@@ -364,6 +369,11 @@ void postOrder(Tree root) {
 }
 ```
 # Tries
+-------------------------------------------------------
+# Binary Heaps
+- Min-Heap: Complete binary tree (totally filled other than the rightmost elements on the last level and the leftmost element of the last level). Element are in ascending order.
+- Max-Heap: Element are in descending order.
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png) ![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/501px-Max-Heap.svg.png)
 -------------------------------------------------------
 # Graph
 ## Notes

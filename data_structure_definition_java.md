@@ -144,8 +144,13 @@ int hash = 0;
 for (int i = 0; i < s.length(); i++) {
     hash = (R * hash + s.charAt(i)) % M;
 }
+```
+**Collision Resoltuion**
+*Hashing with seperate chaining*
+1. Hash function converts keys into array of indices
+2. Build a LinkedList of key-value pairs for every indices whose keys hash to that index. M should be very large so the LinkedList are very small to allow for efficient 2 step process.
+3. Hash to find the list that could contain they key, then squentuially search through that list for the key
 
-## Code
 
 ```
 ### Code

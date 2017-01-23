@@ -151,8 +151,9 @@ for (int i = 0; i < s.length(); i++) {
 2. Build a LinkedList of key-value pairs for every indices whose keys hash to that index. M should be very large so the LinkedList are very small to allow for efficient 2 step process (Collision resolution step).
 3. Hash to find the list that could contain they key, then squentuially search through that list for the key.
 
+![alt tag](http://algs4.cs.princeton.edu/34hash/images/separate-chaining.png)
 
-
+**Hashing with linear probing**
 
 ### Code
 ```java

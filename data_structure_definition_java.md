@@ -80,7 +80,6 @@ public class Stack<T> {
   }
 }
 ```
-class 
 -------------------------------------------------------
 # Queue
 ## Node
@@ -133,6 +132,28 @@ public class Queue<T> {
 # ArrayList/Vector
 -------------------------------------------------------
 # Hash Table
+## Notes
+- Step 1: Compute the hash function that transforms the search key into an array index.
+- Step 2: Collision-resolution process to deal with keys that map to the same indices.
+
+**Modular Hashing**: (Most commonly used hashing function)
+- Positive Integers: We choose array of size M to be prime. index = k % M. it is effectice in dispersing keys evetly between 0 and M - 1;
+- Strings : Modular hashing works also for strings, we treat them as huge integers. For example, R is a small prime integer (java use 31): 
+```java
+int hash = 0;
+for (int i = 0; i < s.length(); i++) {
+    hash = (R * hash + s.charAt(i)) % M;
+}
+
+## Code
+
+```
+### Code
+```java
+class {
+
+}
+```
 -------------------------------------------------------
 # Tree
 ## Code

@@ -371,9 +371,11 @@ void postOrder(Tree root) {
 # Tries
 -------------------------------------------------------
 # Binary Heaps
-- Min-Heap: Complete binary tree (totally filled other than the rightmost elements on the last level and the leftmost element of the last level). Element are in ascending order.
-- Max-Heap: Element are in descending order.
-![alt tag](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png) ![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/501px-Max-Heap.svg.png)
+Defintion: a binary heap is a complete binary tree; that is, all levels of the tree, except possibly the last one (deepest) are fully filled, and, if the last level of the tree is not complete, the nodes of that level are filled from left to right. the key stored in each node is either greater than or equal to (≥) or less than or equal to (≤) the keys in the node's children.
+- Min-Heap: Ascending order   
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+- Max-Heap: Descending order.
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/501px-Max-Heap.svg.png)
 -------------------------------------------------------
 # Graph
 ## Notes

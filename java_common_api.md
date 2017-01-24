@@ -88,6 +88,11 @@ int mask = (Integer.highestOneBit(num) << 1) - 1;
 
 ```
 # ArrayList / Vector
+```java
+int iArr[] = {2, 1, 9, 6, 4};
+// sorting array
+Arrays.sort(iArr);
+```
 # HashSet
 # Stack
 # Queue

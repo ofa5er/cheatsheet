@@ -74,6 +74,7 @@ java.util.BitSet
 
 BitSet b1 = new BitSet(16);
 BitSet b2 = new BitSet(16);
+BitSet bits1 = BitSet.valueOf(55);
 
 b1.or(b2);
 b1.and(b2);
@@ -82,6 +83,8 @@ b1.set(2,true); // change bit index 2 to 1;
 b1.cardinality( ); // return the number of 1
 b1.flip(5); // flip bit 5;
 b1.flip(0, b1.size() - 1); //flip all
+
+int mask = (Integer.highestOneBit(num) << 1) - 1;
 
 ```
 # ArrayList / Vector

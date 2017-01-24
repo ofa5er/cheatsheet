@@ -1,7 +1,11 @@
+
+```java
+Integer.bitCount()
+```
 # Conditions
 # Loops
 # Class
 # Read/Write
 # Threads
-# Templates
+# Generics
 

@@ -366,12 +366,19 @@ void postOrder(Tree root) {
   visit(root);
 }
 ```
+-------------------------------------------------------
 # Tries
+TODO
 -------------------------------------------------------
 # Binary Heaps
+## Defintion
+a binary heap is a complete binary tree; that is, all levels of the tree, except possibly the last one (deepest) are fully filled, and, if the last level of the tree is not complete, the nodes of that level are filled from left to right. the key stored in each node is either greater than or equal to (≥) or less than or equal to (≤) the keys in the node's children.
 **Notes**
-Binary heaps are a common way of implementing priority queues.
-**Defintion**: a binary heap is a complete binary tree; that is, all levels of the tree, except possibly the last one (deepest) are fully filled, and, if the last level of the tree is not complete, the nodes of that level are filled from left to right. the key stored in each node is either greater than or equal to (≥) or less than or equal to (≤) the keys in the node's children.
+- Binary heaps are a common way of implementing priority queues.
+
+2 main functions:
+- **insert** O(log n), insert an element to the right most spot and swap it until it reach the correct position.
+- **Extract Minimum Element**: O(log n), replace the min with the last element and then sort the last element until reach the correct place.
 
 - **Min-Heap**: Ascending order   
 
@@ -380,11 +387,20 @@ Binary heaps are a common way of implementing priority queues.
 
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/501px-Max-Heap.svg.png)
 
+## Code:
+```java
+
+```
 -------------------------------------------------------
 # Graph
 ## Notes
+- **Directed graph**: like one-way street.
+- **Undirected graph**: like two-way street.
+- **Connected graph**: There is a path between every pair of vertices
+- ** Acyclic graph**: A graph without a cycle
 - Could be implemented using adjacency list or adjacency matrix.
 - The adjacency list implementation is the most commmon.
+- Adjacency matrix: NxN matrix where N is the number of the node, the cell is set to True for every connected nodes. It is less effcient to perform operation (BFS, DFS,...). In the matrix, you need to iteration through all the cells to find neighbors.
 ## Code
 ```java
 public class GraphNode {
@@ -395,8 +411,11 @@ public class Graph {
   public GraphNode nodes;
 }
 ```
+
 ## Depth-First Search (DFS)
-### 
+### Note
+- Explore every branch before moving to the next branch.
+- **DFS** is preferred when we want to **visit every node in the graph**, (it is simpler)
 - pre-order traversal is a form of DFS
 - Complexity: `O(E), E = number of edges`.
 - Space : `O(V), V = number of vertices`.
@@ -416,9 +435,12 @@ void DFS(Node root) {
 ### Iterative
 ## Breadth First Search
 ### Note:
+- Explore each neighbor before going to any of the children
+- **BFS** is preferred if you woud like to find the shortest path
 - Node a visits each of a's neighbors before visiting any of their neighbors.
 - Complexity: `O(E), E = number of edges`.
 - Space : `O(V), V = number of vertices`.
+- **Biderectional Search**: Used to find the shortest path between 2 nodes. It operates by running 2 simultaneous breadth-first
 
 ### Iterative (Recommended)
 ```java

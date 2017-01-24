@@ -81,7 +81,7 @@ b1.size();
 b1.set(2,true); // change bit index 2 to 1;
 b1.cardinality( ); // return the number of 1
 b1.flip(5); // flip bit 5;
-b1.flip(0,b1.size() - 1); //flip all
+b1.flip(0, b1.size() - 1); //flip all
 
 ```
 # ArrayList / Vector

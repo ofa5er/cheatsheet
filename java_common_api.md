@@ -94,6 +94,26 @@ int iArr[] = {2, 1, 9, 6, 4};
 Arrays.sort(iArr);
 ```
 # HashSet
+```java
+import java.util.HashSet;
+
+HashSet<String> hmap = new HashSet<String>()
+hset.put("Test");
+hset.containsKey("Test"); // return True
+//Iterate
+for (String s : hset) {
+    System.out.println(s);
+}
+
+//Java 8 only, forEach and Lambda
+hset.forEach(System.out::println);
+
+hset.remove("Test");
+hset.clear();
+hset.isEmpty(); //return true
+hset.size(); //return size
+
+```
 # Stack
 # Queue
 

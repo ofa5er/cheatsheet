@@ -10,6 +10,18 @@ public enum Color {
 }
 ```
 # Conditions
+```java
+int x = 1;
+switch (x) {
+  case 1: System.out.println("1");
+          break;
+  case 2: System.out.println("1");
+          break;
+   default:
+          System.out.println("0");
+          break;
+}
+```
 # Loops
 # Class
 # Read/Write
